@@ -1,8 +1,8 @@
 class WeatherModel {
-  int? lat;
-  int? lon;
+  num? lat;
+  num? lon;
   String? condition;
-  int? temp;
+  num? temp;
   String? cityName;
 
   WeatherModel({

@@ -34,7 +34,7 @@ class WeatherRepoImpl{
     }
   }
 
-  Future<WeatherModel> fetchWeatherByCoordinates()async{
+  Future fetchWeatherByCoordinates()async{
     Position? position = await getLocation();
     return webService.fetchWeatherByCoordinates(position!.latitude, position.longitude);
   }

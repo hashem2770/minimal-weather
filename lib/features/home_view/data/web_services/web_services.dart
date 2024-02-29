@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:minimal_weather/core/constant/constant.dart';
+import 'package:minimal_weather/features/home_view/data/models/weather_model.dart';
 
 class WebService {
   late Dio _dio;
@@ -17,6 +18,6 @@ class WebService {
   fetchWeatherByCoordinates(double lat, double lon) async{
     String url='${baseUrl}lat=$lat&lon=$lon&appid=$apiKey&units=metric';
     Response result =await _dio.get(url);
-    return result.data;
+    return WeatherModel.fromJson(result.data);
   }
 }
