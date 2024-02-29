@@ -1,4 +1,3 @@
-import 'package:minimal_weather/features/home_view/data/models/weather_model.dart';
 import 'package:minimal_weather/features/home_view/data/web_services/web_services.dart';
 import 'package:geolocator/geolocator.dart';
 
